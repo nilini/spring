@@ -3,6 +3,10 @@ public class HelloWorld {
     private String hello2;
     private ChineseSay chineseSay;
 
+    public void HelloWorld(String name, String where, int age){
+        System.out.println(name + where + age);
+    }
+
     public void setHello(String hello){
         this.hello = hello;
     }
