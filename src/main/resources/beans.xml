@@ -10,6 +10,6 @@
         <property name="chineseSay" ref="chineseSay"/>
     </bean>
     <bean id="chineseSay" class="ChineseSay"></bean>
-    
     <bean id="date" class="java.util.Date"></bean>
+    <bean class="EmailNotifier"></bean>
 </beans>

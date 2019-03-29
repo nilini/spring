@@ -20,5 +20,6 @@ public class HelloTest {
         // 打印条本地化消息
         System.out.println(hello);
         System.out.println(now);
+        System.out.println(Locale.getDefault(Locale.Category.FORMAT));
     }
 }
