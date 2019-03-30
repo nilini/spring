@@ -3,3 +3,8 @@ Spring中的Bean是java实例、java组件；而传统Java应用中的JavaBean�
 Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaBaen可以作为Sprign的Bean，从而接受Spring管理。
 传统的JavaBean作为值对象，要求每个属性都提供getter和setter方法；但Spring的Bean只需为接受设值注入的属性提供setter方法即可。
 传统的JavaBean不接受任何容器管理其生命周期；Spring中的Bean由Spring管理其生命周期行为。
+
+2、创建Bean的三种方式
+  调用构造器创建Bean
+  调用静态工厂方法创建Bean
+  调用实例工厂方法创建Bean
