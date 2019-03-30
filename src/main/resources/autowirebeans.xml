@@ -6,5 +6,5 @@
     <bean id="gunDog" class="autowire.Dog">
         <constructor-arg value="laika"/>
     </bean>
-    <bean id="chinese" class="autowire.Chinese" autowire="byName"></bean>
+    <bean id="chinese" class="autowire.Chinese" autowire="byType"></bean>
 </beans>
