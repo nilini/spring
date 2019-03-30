@@ -2,9 +2,11 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <bean id="gunDog" class="autowire.Dog">
-        <constructor-arg value="laika"/>
+    <bean id="chinese" class="autowire.Chinese">
+        <property name="dog">
+            <bean class="autowire.Dog">
+                <constructor-arg value="laika2"/>
+            </bean>
+        </property>
     </bean>
-    <bean id="chinese" class="autowire.Chinese" autowire="byType"></bean>
 </beans>
