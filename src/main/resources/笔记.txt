@@ -1,0 +1,5 @@
+1、spring中的bean和传统的javaBean的区别？
+Spring中的Bean是java实例、java组件；而传统Java应用中的JavaBean通常作为DTO（数据传输对象），用来封装对象，在各层之间传输数据。
+Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaBaen可以作为Sprign的Bean，从而接受Spring管理。
+传统的JavaBean作为值对象，要求每个属性都提供getter和setter方法；但Spring的Bean只需为接受设值注入的属性提供setter方法即可。
+传统的JavaBean不接受任何容器管理其生命周期；Spring中的Bean由Spring管理其生命周期行为。
