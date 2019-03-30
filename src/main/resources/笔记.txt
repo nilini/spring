@@ -11,5 +11,6 @@ Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaB
         使用factory-method属性指定创建Bean实例的静态工厂方法。
         如果静态工厂方法需要参数，则使用<constructor-arg.../>元素指定静态工厂方法的参数。
   调用实例工厂方法创建Bean
-
+        配置实例工厂方法创建Bean，必须将实例工厂配置成Bean实例；而配置静态工厂方法创建Bean,则无须配置工厂Bean。
+        配置实例工厂方法创建Bean，必须使用factory-bean属性确定工厂Bean；而配置静态工厂方法创建Bean，则使用class元素确定静态工厂类。
   
