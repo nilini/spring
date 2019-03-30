@@ -8,3 +8,5 @@ Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaB
   调用构造器创建Bean
   调用静态工厂方法创建Bean
   调用实例工厂方法创建Bean
+
+  
