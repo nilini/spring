@@ -7,6 +7,9 @@ Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaB
 2、创建Bean的三种方式
   调用构造器创建Bean
   调用静态工厂方法创建Bean
+        class属性的值不再是Bean实例的实现类，而是生成Bean实例的静态工厂类。
+        使用factory-method属性指定创建Bean实例的静态工厂方法。
+        如果静态工厂方法需要参数，则使用<constructor-arg.../>元素指定静态工厂方法的参数。
   调用实例工厂方法创建Bean
 
   

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="dog" class="staticFactory.BeingFactory" factory-method="getBeing">
+        <!--配置静态工厂方法的参数-->
+        <constructor-arg value="dog"/>
+        <property name="msg" value="i am dog"/>
+    </bean>
+    <bean id="cat" class="staticFactory.BeingFactory" factory-method="getBeing">
+
+        <constructor-arg value="cat"/>
+        <property name="msg" value="i am cat" />
+    </bean>
+</beans>
