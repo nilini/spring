@@ -3,6 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="exampleBean" class="composite.ExampleBean">
+        <!--相当于执行examoleName.getPerson().setName("齐天大圣")-->
         <property name="person.name" value="齐天大圣"/>
     </bean>
 </beans>
