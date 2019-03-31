@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="steelAxe" class="abstractBean.steelAxe" >
+        <constructor-arg value="铁斧头"/>
+    </bean>
+    <bean id="personTemplate" abstract="true">
+        <property name="name" value="crazyit"/>
+        <property name="axe" ref="steelAxe"/>
+    </bean>
+    <bean id="chinese" class="abstractBean.Chinese" parent="personTemplate" />
+    <bean id="american" class="abstractBean.American" parent="personTemplate" />
+</beans>
