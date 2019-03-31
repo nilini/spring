@@ -13,4 +13,8 @@ Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaB
   调用实例工厂方法创建Bean
         配置实例工厂方法创建Bean，必须将实例工厂配置成Bean实例；而配置静态工厂方法创建Bean,则无须配置工厂Bean。
         配置实例工厂方法创建Bean，必须使用factory-bean属性确定工厂Bean；而配置静态工厂方法创建Bean，则使用class元素确定静态工厂类。
-  
+3、容器中的工厂Bean
+      实例工厂方法、静态工厂方法都是标准的工厂模式，Spring只是负责调用工厂方法来创建Bean实例。
+      此处的工厂Bean是Spring的一种特殊Bean，必须实现FactoryBean接口。
+      通过getBean()方法获取的不是FactoryBean实现类的实例，而是FactoryBean的产品（getObject()方法的返回值）。
+      通过getBean("&{bean的id}")获取FactoryBean实现类的实例。
