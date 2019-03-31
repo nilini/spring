@@ -25,3 +25,5 @@ Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaB
             注入依赖关系之后：使用init-method属性或实现InitializingBean接口
             即将销毁Bean之前：使用destory-method属性或实现DispsableBean接口
             default-init-method和default-destory-method可用于<beans.../>
+5、协调作用域不同步的Bean
+      使用lookup-method属性
