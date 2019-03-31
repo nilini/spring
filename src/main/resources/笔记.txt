@@ -18,3 +18,9 @@ Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaB
       此处的工厂Bean是Spring的一种特殊Bean，必须实现FactoryBean接口。
       通过getBean()方法获取的不是FactoryBean实现类的实例，而是FactoryBean的产品（getObject()方法的返回值）。
       通过getBean("&{bean的id}")获取FactoryBean实现类的实例。
+4、容器中Bean的生命周期
+      singleton：Spring可以管理singleton作用域的Bean的生命周期。每次请求都返回同一个共享实例。
+      prototype：Spring容器仅仅负责创建，每次请求都会重新创建。
+      管理生命周期：
+            注入依赖关系之后：使用init-method属性或实现InitializingBean接口
+            即将销毁Bean之前：
