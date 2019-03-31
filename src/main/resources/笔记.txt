@@ -23,4 +23,5 @@ Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaB
       prototype：Spring容器仅仅负责创建，每次请求都会重新创建。
       管理生命周期：
             注入依赖关系之后：使用init-method属性或实现InitializingBean接口
-            即将销毁Bean之前：
+            即将销毁Bean之前：使用destory-method属性或实现DispsableBean接口
+            default-init-method和default-destory-method可用于<beans.../>
