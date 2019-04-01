@@ -32,9 +32,8 @@ Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaB
       也可以直接定义成新的Bean。
 7、Bean之间的依赖关系配置
       开发者在Spring配置文件中使用XML元素进行配置，实际驱动Spring执行相应的代码。
-      使用<bean.../>元素：
-      使用<property.../>元素：
-      访问getter方法：使用PropertyPathFactoryBean
-      访问类或对象的Field值：使用FieldRetrievingFactoryBean
-      调用普通的方法：使用MethodInvokingFactoryBean
-      本质：通过XML
+      调用构造器创建对象（包括使用工厂方法创建对象），使用<bean.../>元素。
+      调用setter方法，用<property.../>元素。
+      调用getter方法，使用PropertyPathFactoryBean或<util:property-path.../>元素。
+      调用普通的方法，使用MethodInvokingFactoryBean工厂Bean。
+      获取Field的值，使用FieldRetrievingFactoryBean或<util:constant.../>元素。

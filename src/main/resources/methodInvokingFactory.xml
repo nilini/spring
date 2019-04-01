@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <bean id="win" class="javax.swing.JFrame">
+        <constructor-arg value="我的窗口" type="java.lang.String"/>
+        <property name="visible" value="true"/>
+    </bean>
+    <bean id="jta" class="javax.swing.JTextArea">
+        <constructor-arg value="7" type="int" />
+        <constructor-arg value="40" type="int" />
+    </bean>
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetObject" value="win"/>
+        <property name="targetMethod" value="add"/>
+        <property name="arguments">
+            <list>
+                <bean class="javax.swing.JScrollPane">
+                    <constructor-arg ref="jta"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetObject" value="win"/>
+        <property name="targetMethod" value="add"/>
+        <property name="arguments">
+            <list>
+                <ref bean="jp" />
+                <util:constant static-field="java.awt.BorderLayout.SOUTH" />
+            </list>
+        </property>
+    </bean>
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+
+        <property name="targetObject" value="jp"/>
+        <property name="targetMethod" ref="add"/>
+        <property name="arguments">
+            <list>
+                <ref bean="jb1">
+            </list>
+        </property>
+
+    </bean>
+</beans>
