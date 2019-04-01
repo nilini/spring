@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="theAge1" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+        <property name="targetClass" value="java.sql.Connection"/>
+        <property name="targetField" value="TRANSACTION_SERIALIZABLE"/>
+    </bean>
+    <bean id="theAge2" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean">
+        <property name="staticField" value="java.sql.Connection.TRANSACTION_SERIALIZABLE"/>
+    </bean>
+
+    <bean id="son" class="fieldRetrievingFactory.Son">
+        <property name="age">
+            <bean id="java.sql.Connection.TRANSACTION_SERIALIZABLE" class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean" />
+        </property>
+    </bean>
+</beans>

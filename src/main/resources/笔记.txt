@@ -30,3 +30,11 @@ Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaB
 6、获取其他Bean的属性值
       PropertyPathFactoryBean用来获取目标Bean的属性值（getter方法的返回值），获得的值可注入给其他Bean，
       也可以直接定义成新的Bean。
+7、Bean之间的依赖关系配置
+      开发者在Spring配置文件中使用XML元素进行配置，实际驱动Spring执行相应的代码。
+      使用<bean.../>元素：
+      使用<property.../>元素：
+      访问getter方法：使用PropertyPathFactoryBean
+      访问类或对象的Field值：使用FieldRetrievingFactoryBean
+      调用普通的方法：使用MethodInvokingFactoryBean
+      本质：通过XML
