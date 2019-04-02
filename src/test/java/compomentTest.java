@@ -10,5 +10,6 @@ public class compomentTest {
 //        System.out.println(Arrays.toString(context.getBeanDefinitionNames()));
         Chinese chinese = context.getBean("chinese", Chinese.class);
         System.out.println(chinese.getAxe().chop());
+        ((ClassPathXmlApplicationContext) context).close();
     }
 }
