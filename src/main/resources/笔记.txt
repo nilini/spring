@@ -54,3 +54,10 @@ Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaB
       CustomScopeConfigurer：自定义作用域的配置器。
       容器后处理器通常用于对Spring容器进行处理，在容器实例化其他的Bean之前。
       可配置多个容器后处理器。设置order属性控制容器后处理器的执行次序。
+11、Resource接口
+      UrlResource：访问网络资源的实现类。
+      ClassPathResource：访问类加载路径里资源的实现类。
+      FileSystemResource：访问文件系统里资源的实现类。
+      ServletContextResource：访问相对于ServletContext路径下的资源的实现类。
+      InputStreamResource：访问输入流资源的实现类。
+      ByteArrayResource：访问字节数组资源的实现类。
