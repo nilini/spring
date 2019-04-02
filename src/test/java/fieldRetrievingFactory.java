@@ -1,3 +1,4 @@
+import org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -9,5 +10,6 @@ public class fieldRetrievingFactory {
         System.out.println("系统获取 theage1的值, " + context.getBean("theAge1"));
         System.out.println("系统获取 theage2的值, " + context.getBean("theAge2"));
         System.out.println("Son " + context.getBean("son"));
+        BeanNameAutoProxyCreator
     }
 }

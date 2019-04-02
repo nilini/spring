@@ -31,15 +31,5 @@
             </list>
         </property>
     </bean>
-    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
-
-        <property name="targetObject" value="jp"/>
-        <property name="targetMethod" ref="add"/>
-        <property name="arguments">
-            <list>
-                <ref bean="jb1">
-            </list>
-        </property>
-
-    </bean>
+   
 </beans>

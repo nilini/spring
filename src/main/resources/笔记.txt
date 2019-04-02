@@ -37,3 +37,10 @@ Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaB
       调用getter方法，使用PropertyPathFactoryBean或<util:property-path.../>元素。
       调用普通的方法，使用MethodInvokingFactoryBean工厂Bean。
       获取Field的值，使用FieldRetrievingFactoryBean或<util:constant.../>元素。
+8、Bean后处理器
+      是一种特殊的Bean，负责对容器中其他Bean执行后处理。
+      实现BeanPostProcessor接口，两个方法：postProcessBeforeInitialization和postProcessAfterInitialization。
+      接口InitializingBean提供afterPropertiesSet方法。
+      加载顺序：postProcessBeforeInitialization -> afterPropertiesSet -> init-method -> postProcessAfterInitialization
+      如果使用BeanFactory最为Spring容器，则必须手动注册Bean后处理器。
+9、容器后处理器
