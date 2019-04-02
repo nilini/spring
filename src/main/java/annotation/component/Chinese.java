@@ -29,6 +29,7 @@ public class Chinese {
         System.out.println("执行初始化方法init...");
     }
 
+    // 只有在bean的作用域为signleton时才生效
     @PreDestroy
     public void close(){
         System.out.println("正在执行销毁之前的close方法...");
