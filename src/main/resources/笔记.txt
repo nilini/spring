@@ -44,3 +44,13 @@ Spring中的Bean比JavaBean的功能要复杂，用法也更丰富。创痛JavaB
       加载顺序：postProcessBeforeInitialization -> afterPropertiesSet -> init-method -> postProcessAfterInitialization
       如果使用BeanFactory最为Spring容器，则必须手动注册Bean后处理器。
 9、容器后处理器
+      负责处理容器本身。
+      实现BeanFactoryPostProcessor接口。
+      ApplicationContext会自动将实现了BeanFactoryPostProcessor接口的Bean注册为容器后实现器。
+10、常见容器后处理器
+      PropertyPlaceholderConfigurer：属性占位符配置器。
+      PropertyOverrideConfigurer：重写占位符配置器。
+      CustomAutowrieConfigurer：自定义自动装配的配置器。
+      CustomScopeConfigurer：自定义作用域的配置器。
+      容器后处理器通常用于对Spring容器进行处理，在容器实例化其他的Bean之前。
+      可配置多个容器后处理器。设置order属性控制容器后处理器的执行次序。
