@@ -10,12 +10,13 @@ import javax.annotation.Resource;
 // 指定该类作为Sprign Bean，Bean实例名为chinese
 @Component("chinese")
 public class Chinese {
+    @Resource(name = "steelAxe")
     private Axe axe;
 
-    @Resource(name="stoneAxe")
-    public void setAxe(Axe axe) {
-        this.axe = axe;
-    }
+//    @Resource(name="stoneAxe")
+//    public void setAxe(Axe axe) {
+//        this.axe = axe;
+//    }
 
     public Axe getAxe() {
         return axe;
